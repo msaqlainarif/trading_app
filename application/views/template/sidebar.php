@@ -28,7 +28,43 @@
 						<b class="arrow"></b>
 
 						<ul class="submenu">
+                        
+                        	<li class="hover">
+								<a href="<?php echo base_url('common/location_types'); ?>">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Location Types
+								</a>
+
+								<b class="arrow"></b>
+							</li>
                     
+                    		<li class="hover">
+								<a href="<?php echo base_url('common/locations'); ?>">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Locations
+                                </a>
+
+								<b class="arrow"></b>
+							</li>
+                            
+                            <li class="hover">
+								<a href="<?php echo base_url('common/warehouse_types'); ?>">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Warehouse Types
+                                </a>
+
+								<b class="arrow"></b>
+							</li>
+                            
+                            <li class="hover">
+								<a href="<?php echo base_url('common/warehouses'); ?>">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Warehouses
+                                </a>
+
+								<b class="arrow"></b>
+							</li>
+                            
 							<li class="hover">
 								<a href="<?php echo base_url('common/companies'); ?>">
 									<i class="menu-icon fa fa-caret-right"></i>
@@ -54,7 +90,14 @@
 					</li>
                    
                     
-              
+             	 <li class="active">
+						<a href="<?php echo base_url('common/products');?>">
+							<i class="menu-icon fa fa-tachometer"></i>
+							<span class="menu-text"> Products </span>
+						</a>
+
+						<b class="arrow"></b>
+					</li>
 						 
   					<!--<li class="hover">
 						<a href="<?php echo base_url('data/vendors'); ?>">
