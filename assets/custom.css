@@ -1,0 +1,31 @@
+body{font-size: 13px !important;}
+.navbar{background: #438EB9 !important;    margin-bottom: 0px !important;}
+.navbar-brand{line-height:40px !important;}
+.navbar-header small{color:#fff !important; margin-left:5px;}
+.no-skin .sidebar-shortcuts{margin-top:5px !important;}
+
+.permissions_top {
+    color: #d20000;
+    background: #CCC;
+    width: 500px;
+    padding-left: 3px;
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid #999;
+}
+.permissions_middle {
+    width: 500px;
+    padding-left: 3px;
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid #999;
+    border-top: none;
+}
+div.navbar-buttons ul.ace-nav li a:hover { background-color:transparent !important;}
+.error_fill{
+	    background-color: #f2dede !important;
+    border-color: #ebccd1 !important;
+    color: #a94442 !important;
+	}
+
+ 
