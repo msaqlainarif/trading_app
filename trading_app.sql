@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 20, 2018 at 06:58 PM
+-- Generation Time: May 20, 2018 at 07:36 PM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.1.16
 
@@ -133,6 +133,66 @@ INSERT INTO `tbl_product_groups` (`product_group_id`, `product_group_name`) VALU
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbl_purchase_detail`
+--
+
+CREATE TABLE `tbl_purchase_detail` (
+  `purchase_id` int(11) NOT NULL,
+  `party_id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `quantitiy` int(11) NOT NULL,
+  `price` int(11) NOT NULL,
+  `discount_percentage` int(11) NOT NULL,
+  `discount_value` int(11) NOT NULL,
+  `value` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_purchase_master`
+--
+
+CREATE TABLE `tbl_purchase_master` (
+  `purchase_id` int(11) NOT NULL,
+  `reference_no` int(11) NOT NULL,
+  `purchase_date` date NOT NULL,
+  `remarks` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_sale_detail`
+--
+
+CREATE TABLE `tbl_sale_detail` (
+  `sale_id` int(11) NOT NULL,
+  `party_id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `quantity` int(11) NOT NULL,
+  `price` int(11) NOT NULL,
+  `discount_percentage` int(11) NOT NULL,
+  `discount_value` int(11) NOT NULL,
+  `value` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_sale_master`
+--
+
+CREATE TABLE `tbl_sale_master` (
+  `sale_id` int(11) NOT NULL,
+  `reference_no` int(11) NOT NULL,
+  `sale_date` date NOT NULL,
+  `remarks` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tbl_warehouses`
 --
 
@@ -210,6 +270,18 @@ ALTER TABLE `tbl_products`
 ALTER TABLE `tbl_product_groups`
   ADD PRIMARY KEY (`product_group_id`),
   ADD UNIQUE KEY `product_group_name` (`product_group_name`);
+
+--
+-- Indexes for table `tbl_purchase_master`
+--
+ALTER TABLE `tbl_purchase_master`
+  ADD PRIMARY KEY (`purchase_id`);
+
+--
+-- Indexes for table `tbl_sale_master`
+--
+ALTER TABLE `tbl_sale_master`
+  ADD PRIMARY KEY (`sale_id`);
 
 --
 -- Indexes for table `tbl_warehouses`
