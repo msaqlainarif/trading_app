@@ -92,7 +92,7 @@
                     
              	 <li class="active">
 						<a href="<?php echo base_url('common/products');?>">
-							<i class="menu-icon fa fa-tachometer"></i>
+							<i class="menu-icon fa fa-product-hunt"></i>
 							<span class="menu-text"> Products </span>
 						</a>
 
