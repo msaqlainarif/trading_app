@@ -37,6 +37,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		$crud->set_rules('location_type','Location Type','required|is_unique[tbl_location_types.location_type]');
 		$crud->required_fields('location_type');
 		
+		//Editing Code
+		$state = $crud->getState();
+		
+		if($state == 'add')
+		{
+		//Do your cool stuff here . You don't need any State info you are in add
+		}
+		elseif($state == 'edit')
+		{
+		$primary_key = $state_info->primary_key;
+		//Do your awesome coding here. 
+		}
+		
 		$data['title']='Admin | Location Types';
 		$data['page_heading']='Manage Location Types';
 		$data['view']='grocery_main';
