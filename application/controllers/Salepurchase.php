@@ -5,7 +5,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   var $data;
 
   public function __construct(){
-
 		parent::__construct();
 		$this->load->library('grocery_CRUD');
 	}

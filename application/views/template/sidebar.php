@@ -83,9 +83,14 @@
 								<b class="arrow"></b>
 							</li>
                         
-                            
-                            
-                           
+                            <li class="hover">
+								<a href="<?php echo base_url('common/party_types'); ?>">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Party Types
+								</a>
+
+								<b class="arrow"></b>
+							</li>                                                      
 						</ul>
 					</li>
                    
@@ -107,8 +112,73 @@
 
 						<b class="arrow"></b>
 					</li>-->
-                    
-                    
+
+                    <!-- Accounts Coding for Sidebar-->
+                    <li class="active">
+						<a href="<?php echo base_url('common/accounts');?>">
+							<i class="menu-icon fa fa-file-o"></i>
+							<span class="menu-text"> Accounts </span>
+						</a>
+
+						<b class="arrow"></b>
+                        
+                        <ul class="submenu">
+                        	<li class="hover">
+								<a href="<?php echo base_url('common/account_types'); ?>">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Account Types
+                                 </a>
+
+								<b class="arrow"></b>
+							</li>
+                            
+                            <li class="hover">
+								<a href="<?php echo base_url('common/account_groups'); ?>">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Account Groups
+                                 </a>
+
+								<b class="arrow"></b>
+							</li>
+                            
+                            <li class="hover">
+								<a href="<?php echo base_url('common/account_heads'); ?>">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Account Heads
+                                 </a>
+
+								<b class="arrow"></b>
+							</li>
+                            
+                            <li class="hover">
+								<a href="<?php echo base_url('common/account_subheads'); ?>">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Account Sub Heads
+                                 </a>
+
+								<b class="arrow"></b>
+							</li>
+                            
+                            <li class="hover">
+								<a href="<?php echo base_url('common/transaction_accounts'); ?>">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Transaction Accounts
+                                 </a>
+
+								<b class="arrow"></b>
+							</li>
+                            
+                            <li class="hover">
+								<a href="<?php echo base_url('common/parties'); ?>">
+									<i class="menu-icon fa fa-caret-right"></i>
+									Parties
+                                 </a>
+
+								<b class="arrow"></b>
+							</li>
+                            
+                         </ul>
+                      </li>
                    
                     
 					<li class="">

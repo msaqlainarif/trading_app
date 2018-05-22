@@ -36,11 +36,11 @@
                         <div class="col-md-6">
                                 	<label for="ds">Purchase Date</label>
                                  	<div class="input-group">
-    <input class="form-control date-picker issue_date required" type="text" data-date-format="dd-mm-yyyy" />
-    <span class="input-group-addon"> <i class="fa fa-calendar bigger-110"></i> </span> </div>
-                                </div>
+    									<input class="form-control date-picker issue_date required" type="text" data-date-format="dd-mm-yyyy" />
+    									<span class="input-group-addon"> <i class="fa fa-calendar bigger-110"></i> </span> </div>
+                                	</div>
                                 
-                        		<div class="col-md-6">
+                        <div class="col-md-6">
                                 	<label for="ds">Party</label>
                                    <select class="form-control required" id="party">
                                    	<option value="">Party</option>
