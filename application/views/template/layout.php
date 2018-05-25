@@ -126,14 +126,17 @@
 		<script src="<?php echo base_url();?>assets/js/buttons.print.min.js"></script>
 		<script src="<?php echo base_url();?>assets/js/buttons.colVis.min.js"></script>
 		<script src="<?php echo base_url();?>assets/js/dataTables.select.min.js"></script>
-
+		<script src="<?php echo base_url();?>assets/grocery_crud/themes/bootstrap/js/jquery-plugins/jquery.print-this.js"></script>
+		<script src="<?php echo base_url();?>assets/grocery_crud/themes/bootstrap/js/jquery-plugins/bootstrap-growl.min.js"></script>
 		<!-- ace scripts -->
 		<script src="<?php echo base_url();?>assets/js/ace-elements.min.js"></script>
 		<script src="<?php echo base_url();?>assets/js/ace.min.js"></script>
 
 		<!-- inline scripts related to this page -->
 		<script type="text/javascript">
+		
 		jQuery(function($) {
+	
 				$('.chosen-select').chosen({allow_single_deselect:true, width: "100%"}); 
 				$('.date-picker').datepicker({
 					autoclose: true,
@@ -237,6 +240,9 @@ var myTable =
 				
 			
 			});
+			
+	
+			
 		</script>
      
 	</body>

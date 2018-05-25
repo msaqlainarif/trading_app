@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0
+-- version 4.7.9
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 22, 2018 at 10:16 PM
+-- Generation Time: May 25, 2018 at 09:17 PM
 -- Server version: 10.1.31-MariaDB
--- PHP Version: 7.1.16
+-- PHP Version: 7.1.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -190,21 +190,6 @@ INSERT INTO `tbl_location_types` (`location_type_id`, `location_type`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_parties`
---
-
-CREATE TABLE `tbl_parties` (
-  `party_type_id` int(11) NOT NULL,
-  `party_id` int(11) NOT NULL,
-  `party_title` varchar(255) NOT NULL,
-  `party_description` varchar(255) NOT NULL,
-  `party_address` varchar(255) NOT NULL,
-  `transaction_account_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `tbl_party_detail`
 --
 
@@ -217,6 +202,28 @@ CREATE TABLE `tbl_party_detail` (
   `party_bank_accountno1` int(11) NOT NULL,
   `party_bank_accountno2` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_party_master`
+--
+
+CREATE TABLE `tbl_party_master` (
+  `party_type_id` int(11) NOT NULL,
+  `party_id` int(11) NOT NULL,
+  `party_title` varchar(255) NOT NULL,
+  `party_description` varchar(255) NOT NULL,
+  `party_address` varchar(255) NOT NULL,
+  `transaction_account_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_party_master`
+--
+
+INSERT INTO `tbl_party_master` (`party_type_id`, `party_id`, `party_title`, `party_description`, `party_address`, `transaction_account_id`) VALUES
+(1, 0, 'MHAR AFZAL ', 'AFASFASD', 'SDFADSFASDF', 54);
 
 -- --------------------------------------------------------
 
@@ -292,14 +299,25 @@ INSERT INTO `tbl_product_groups` (`product_group_id`, `product_group_name`) VALU
 
 CREATE TABLE `tbl_purchase_detail` (
   `purchase_id` int(11) NOT NULL,
-  `party_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
-  `quantitiy` int(11) NOT NULL,
+  `quantity` int(11) NOT NULL,
   `price` int(11) NOT NULL,
-  `discount_percentage` int(11) NOT NULL,
-  `discount_value` int(11) NOT NULL,
+  `discount` int(11) NOT NULL,
   `value` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_purchase_detail`
+--
+
+INSERT INTO `tbl_purchase_detail` (`purchase_id`, `product_id`, `quantity`, `price`, `discount`, `value`) VALUES
+(2, 1, 25, 45, 0, 454),
+(2, 1, 2554, 545, 2, 4654),
+(3, 1, 2, 54, 54, 54),
+(4, 1, 2, 54, 45, 454),
+(5, 1, 1, 45, 154, 45),
+(6, 1, 564, 54, 4654, 654),
+(7, 1, 54, 45456, 6464, 65465);
 
 -- --------------------------------------------------------
 
@@ -309,10 +327,23 @@ CREATE TABLE `tbl_purchase_detail` (
 
 CREATE TABLE `tbl_purchase_master` (
   `purchase_id` int(11) NOT NULL,
+  `party_id` int(11) NOT NULL,
   `reference_no` int(11) NOT NULL,
   `purchase_date` date NOT NULL,
   `remarks` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_purchase_master`
+--
+
+INSERT INTO `tbl_purchase_master` (`purchase_id`, `party_id`, `reference_no`, `purchase_date`, `remarks`) VALUES
+(2, 1, 0, '2018-05-23', 'ASDFASD'),
+(3, 1, 45646, '2018-05-24', 'adfadf'),
+(4, 1, 5446, '2018-05-24', 'sdfasdfasd'),
+(5, 1, 4564, '2018-05-24', 'asdf'),
+(6, 1, 4654, '2018-05-24', '654'),
+(7, 1, 4564, '2018-05-24', 'dfasd');
 
 -- --------------------------------------------------------
 
@@ -383,6 +414,7 @@ CREATE TABLE `tbl_warehouse_types` (
 --
 
 INSERT INTO `tbl_warehouse_types` (`warehouse_type_id`, `warehouse_type`) VALUES
+(2, 'df'),
 (1, 'Godown');
 
 --
@@ -447,9 +479,9 @@ ALTER TABLE `tbl_location_types`
   ADD UNIQUE KEY `location_type` (`location_type`);
 
 --
--- Indexes for table `tbl_parties`
+-- Indexes for table `tbl_party_master`
 --
-ALTER TABLE `tbl_parties`
+ALTER TABLE `tbl_party_master`
   ADD PRIMARY KEY (`party_id`),
   ADD UNIQUE KEY `party_title` (`party_title`);
 
@@ -541,6 +573,12 @@ ALTER TABLE `tbl_product_groups`
   MODIFY `product_group_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `tbl_purchase_master`
+--
+ALTER TABLE `tbl_purchase_master`
+  MODIFY `purchase_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
 -- AUTO_INCREMENT for table `tbl_warehouses`
 --
 ALTER TABLE `tbl_warehouses`
@@ -550,7 +588,7 @@ ALTER TABLE `tbl_warehouses`
 -- AUTO_INCREMENT for table `tbl_warehouse_types`
 --
 ALTER TABLE `tbl_warehouse_types`
-  MODIFY `warehouse_type_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `warehouse_type_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

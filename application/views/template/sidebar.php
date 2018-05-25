@@ -95,7 +95,7 @@
 					</li>
                    
                     
-             	 <li class="active">
+             	 <li>
 						<a href="<?php echo base_url('common/products');?>">
 							<i class="menu-icon fa fa-product-hunt"></i>
 							<span class="menu-text"> Products </span>
@@ -104,82 +104,108 @@
 						<b class="arrow"></b>
 					</li>
 						 
-  					<!--<li class="hover">
-						<a href="<?php echo base_url('data/vendors'); ?>">
-							<i class="menu-icon fa fa-user"></i>
-							<span class="menu-text"> Vendors </span>
+  					  <!-- SalePurchase Coding for Sidebar-->
+<li class="hover">
+						<a href="#" class="dropdown-toggle">
+							<i class="menu-icon fa fa-shopping-cart"></i>
+							<span class="menu-text">
+								Transactions
+							</span>
+
+							<b class="arrow fa fa-angle-right"></b>
 						</a>
 
 						<b class="arrow"></b>
-					</li>-->
 
-                    <!-- Accounts Coding for Sidebar-->
-                    <li class="active">
-						<a href="<?php echo base_url('common/accounts');?>">
-							<i class="menu-icon fa fa-file-o"></i>
-							<span class="menu-text"> Accounts </span>
-						</a>
-
-						<b class="arrow"></b>
+						<ul class="submenu">
                         
-                        <ul class="submenu">
                         	<li class="hover">
-								<a href="<?php echo base_url('common/account_types'); ?>">
+								<a href="<?php echo base_url('salepurchase/GeneratePurchaseInvoice'); ?>">
 									<i class="menu-icon fa fa-caret-right"></i>
-									Account Types
-                                 </a>
+									 Purchase Invoice
+								</a>
+								<b class="arrow"></b>
+							</li>
+                    
+                    		
+                            
+                         
+                                                                         
+						</ul>
+					</li>
+                    <!-- Accounts Coding for Sidebar-->
+                    
+                   <li class="hover">
+						<a href="#" class="dropdown-toggle">
+							<i class="menu-icon fa fa-file-o"></i>
+							<span class="menu-text">
+								Accounts
+							</span>
+
+							<b class="arrow fa fa-angle-right"></b>
+						</a>
+
+						<b class="arrow"></b>
+
+						<ul class="submenu">
+                        
+                        	<li class="hover">
+								<a href="<?php echo base_url('accounts/account_types'); ?>">
+									<i class="menu-icon fa fa-caret-right"></i>
+										Account Types
+								</a>
+
+								<b class="arrow"></b>
+							</li>
+                    
+                    		<li class="hover">
+								<a href="<?php echo base_url('accounts/account_groups'); ?>">
+									<i class="menu-icon fa fa-caret-right"></i>
+										Account Groups
+                                </a>
 
 								<b class="arrow"></b>
 							</li>
                             
                             <li class="hover">
-								<a href="<?php echo base_url('common/account_groups'); ?>">
-									<i class="menu-icon fa fa-caret-right"></i>
-									Account Groups
-                                 </a>
-
-								<b class="arrow"></b>
-							</li>
-                            
-                            <li class="hover">
-								<a href="<?php echo base_url('common/account_heads'); ?>">
+								<a href="<?php echo base_url('accounts/account_heads'); ?>">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Account Heads
-                                 </a>
+                                </a>
 
 								<b class="arrow"></b>
 							</li>
                             
                             <li class="hover">
-								<a href="<?php echo base_url('common/account_subheads'); ?>">
+								<a href="<?php echo base_url('accounts/account_subheads'); ?>">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Account Sub Heads
-                                 </a>
+                                </a>
 
 								<b class="arrow"></b>
 							</li>
                             
-                            <li class="hover">
-								<a href="<?php echo base_url('common/transaction_accounts'); ?>">
+							<li class="hover">
+								<a href="<?php echo base_url('accounts/transaction_accounts'); ?>">
 									<i class="menu-icon fa fa-caret-right"></i>
-									Transaction Accounts
-                                 </a>
+								Transaction Accounts
+
+								</a>
 
 								<b class="arrow"></b>
 							</li>
-                            
+							
                             <li class="hover">
-								<a href="<?php echo base_url('common/parties'); ?>">
+								<a href="<?php echo base_url('accounts/parties'); ?>">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Parties
-                                 </a>
+								</a>
 
 								<b class="arrow"></b>
 							</li>
-                            
-                         </ul>
-                      </li>
-                   
+                                                                                 
+						</ul>
+					</li>
                     
 					<li class="">
 						<a href="<?php echo base_url('dashboard/profile_setting'); ?>">
